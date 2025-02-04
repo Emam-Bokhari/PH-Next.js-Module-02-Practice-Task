@@ -8,7 +8,6 @@ export default async function HomePage() {
     next: { revalidate: 30 },
   });
   const posts = await response.json();
-  console.log(posts);
   return (
     <div>
       <Image
