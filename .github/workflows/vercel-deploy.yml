@@ -1,0 +1,37 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main # Main branch push hole deploy hobe
+
+jobs:
+  build-and-deploy:
+    runs-on: windows-latest # Windows environment e workflow run hobe
+
+    steps:
+      # Step 1: Checkout Repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Step 2: Install Node.js
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18 # Node.js version set kora
+
+      # Step 3: Install Dependencies
+      - name: Install Dependencies
+        run: npm install
+
+      # Step 4: Build Next.js App
+      - name: Build Next.js App
+        run: npm run build
+
+      # Step 5: Install Vercel CLI
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+
+      # Step 6: Deploy to Vercel
+      - name: Deploy to Vercel
+        run: vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
