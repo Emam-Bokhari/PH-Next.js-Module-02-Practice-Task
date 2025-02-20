@@ -1,6 +1,6 @@
 import Image from "next/image";
 import bannerImage from "@/assets/banner.jpg";
-import BlogCard from "@/components/posts/BlogCard";
+import BlogCard from "@/components/modules/posts/BlogCard";
 import NavigationButton from "@/components/shared/NavigationButton";
 
 export default async function HomePage() {

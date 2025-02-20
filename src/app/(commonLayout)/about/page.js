@@ -1,4 +1,4 @@
-import TeamMemberCard from "@/components/about/teamMemberCard";
+import TeamMemberCard from "@/components/modules/about/TeamMemberCard";
 
 export default async function AboutPage() {
   const response = await fetch("https://jsonplaceholder.typicode.com/users", {
