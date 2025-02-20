@@ -7,7 +7,7 @@ export default async function AboutPage() {
   const teamMembers = await response.json();
   return (
     <div className="grid grid-cols-3 gap-4 my-10">
-      {teamMembers?.slice(0, 3)?.map((teamMember) => (
+      {teamMembers?.slice(0, 4)?.map((teamMember) => (
         <TeamMemberCard key={teamMember.id} teamMember={teamMember} />
       ))}
     </div>
